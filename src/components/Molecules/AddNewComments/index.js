@@ -10,7 +10,7 @@ import "./styles.scss";
 
 class AddNewComments extends PureComponent {
   render() {
-    const { t, onClick, onChange } = this.props;
+    const { t, onClick, onChange, value } = this.props;
     return (
       <form className="addNewComments" noValidate autoComplete="off">
         <div className="row">
@@ -22,6 +22,7 @@ class AddNewComments extends PureComponent {
             className="textareaField"
             margin="normal"
             variant="outlined"
+            value={value}
             onChange={e => onChange(e.target.value)}
           />
         </div>
@@ -35,11 +36,13 @@ class AddNewComments extends PureComponent {
 
 AddNewComments.defaultProps = {
   onClick: null,
-  onChange: null
+  onChange: null,
+  value: ""
 };
 
 AddNewComments.propTypes = {
   onClick: PropTypes.func,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  value: PropTypes.string
 };
 export default withTranslation()(AddNewComments);

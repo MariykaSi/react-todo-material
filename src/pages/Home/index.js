@@ -42,11 +42,11 @@ class Home extends Component {
   };
 
   handleSubmitComment = () => {
-    const { addComment, selectedItem } = this.props;
+    const { addComment } = this.props;
     const { newComment } = this.state;
     if (!newComment.length) return;
-    addComment({ text: newComment, id: uuidv1(), itemId: selectedItem });
-    this.setState({ newItem: "" });
+    addComment({ text: newComment, id: uuidv1() });
+    this.setState({ newComment: "" });
   };
 
   deleteItem = id => {
@@ -59,6 +59,7 @@ class Home extends Component {
 
   render() {
     const { list, selectedItem, t } = this.props;
+    const { newItem, newComment } = this.state;
 
     const item = list.find(item => item.id === selectedItem);
     const indexItem = list.indexOf(item);
@@ -77,6 +78,7 @@ class Home extends Component {
               clickItem={this.clickItem}
               items={list}
               selectedItem={selectedItem}
+              newItem={newItem}
             />
             {list[indexItem] && (
               <CommentsContainer
@@ -84,6 +86,7 @@ class Home extends Component {
                 item={indexItem + 1}
                 onChange={this.handleAddComment}
                 onClick={this.handleSubmitComment}
+                newComment={newComment}
               />
             )}
           </div>

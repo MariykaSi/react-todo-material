@@ -9,7 +9,7 @@ import "./styles.scss";
 
 class AddNew extends PureComponent {
   render() {
-    const { t, onClick, onChange } = this.props;
+    const { t, onClick, onChange, value } = this.props;
     return (
       <div className="addNew">
         <TextField
@@ -18,6 +18,7 @@ class AddNew extends PureComponent {
           id="custom-css-outlined-input"
           className="input-field"
           onChange={e => onChange(e.target.value)}
+          value={value}
         />
         <Button variant="contained" onClick={() => onClick()}>
           {t("buttons.addNew")}
@@ -29,12 +30,14 @@ class AddNew extends PureComponent {
 
 AddNew.defaultProps = {
   onClick: null,
-  onChange: null
+  onChange: null,
+  value: ""
 };
 
 AddNew.propTypes = {
   onClick: PropTypes.func,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  value: PropTypes.string
 };
 
 export default withTranslation()(AddNew);

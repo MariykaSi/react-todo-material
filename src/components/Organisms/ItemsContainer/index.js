@@ -16,13 +16,14 @@ class ItemsContainer extends PureComponent {
       onClick,
       onChange,
       deleteItem,
-      clickItem
+      clickItem,
+      newItem
     } = this.props;
     return (
       <div className="itemsContainer">
         <div className="itemsHeader">
           <h2>{t("items")}</h2>
-          <AddNew onChange={onChange} onClick={onClick} />
+          <AddNew onChange={onChange} onClick={onClick} value={newItem} />
         </div>
         <ListItems
           items={items}
@@ -40,7 +41,8 @@ ItemsContainer.defaultProps = {
   onChange: null,
   deleteItem: null,
   clickItem: null,
-  selectedItem: "1"
+  selectedItem: "1",
+  newItem: ""
 };
 
 ItemsContainer.propTypes = {
@@ -49,6 +51,7 @@ ItemsContainer.propTypes = {
   deleteItem: PropTypes.func,
   clickItem: PropTypes.func,
   items: PropTypes.array.isRequired,
+  newItem: PropTypes.string,
   selectedItem: PropTypes.string
 };
 

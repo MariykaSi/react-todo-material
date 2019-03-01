@@ -9,7 +9,7 @@ import "./styles.scss";
 
 class CommentsContainer extends PureComponent {
   render() {
-    const { t, comments, item, onClick, onChange } = this.props;
+    const { t, comments, item, onClick, onChange, newComment } = this.props;
     return (
       <div className="сommentsContainer">
         <h2>
@@ -24,7 +24,11 @@ class CommentsContainer extends PureComponent {
               </div>
             ))}
         </div>
-        <AddNewComments onChange={onChange} onClick={onClick} />
+        <AddNewComments
+          onChange={onChange}
+          onClick={onClick}
+          value={newComment}
+        />
       </div>
     );
   }
@@ -33,13 +37,15 @@ class CommentsContainer extends PureComponent {
 CommentsContainer.defaultProps = {
   onClick: null,
   onChange: null,
-  comments: null
+  comments: null,
+  newComment: ""
 };
 
 CommentsContainer.propTypes = {
   onClick: PropTypes.func,
   onChange: PropTypes.func,
   comments: PropTypes.array,
-  item: PropTypes.number.isRequired
+  item: PropTypes.number.isRequired,
+  newComment: PropTypes.string
 };
 export default withTranslation()(CommentsContainer);
