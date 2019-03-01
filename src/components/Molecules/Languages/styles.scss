@@ -1,0 +1,55 @@
+@import "../../../styles/variables.scss";
+
+.langContainer {
+  display: flex;
+  flex-direction: column;
+  .button {
+    min-width: 165px;
+    height: 37px;
+    background: $blue;
+    color: $white;
+    font-family: "Roboto Medium";
+    text-transform: none;
+    box-shadow: none;
+    margin-top: 20px;
+    svg {
+      margin-right: 12px;
+    }
+  }
+  .popup {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .arrow-up {
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-bottom: 14px solid $darkOrange;
+      display: none;
+    }
+    .lang {
+      background: $darkOrange;
+      padding: 15px;
+      min-width: 130px;
+      display: none;
+      flex-direction: column;
+
+      .langItem {
+        font-size: 14pt;
+        color: $white;
+        cursor: pointer;
+
+        img {
+          margin: 0 8px;
+        }
+      }
+    }
+  }
+}
+.langContainer:hover .lang {
+  display: flex;
+}
+.langContainer:hover .arrow-up {
+  display: block;
+}

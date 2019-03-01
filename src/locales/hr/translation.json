@@ -1,0 +1,11 @@
+{
+  "title": "NAPRAVITI",
+  "items": "Stavke",
+  "comments": "Komentari",
+  "buttons": {
+    "languages": "Jezici",
+    "addNew": "Dodaj novi",
+    "delete": "Izbrisati",
+    "newItemPlaceholder": "Ovdje upišite naziv"
+  }
+}

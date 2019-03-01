@@ -1,0 +1,11 @@
+{
+  "title": "TODO",
+  "items": "Items",
+  "comments": "Comments",
+  "buttons": {
+    "languages": "Languages",
+    "addNew": "Add new",
+    "delete": "Delete",
+    "newItemPlaceholder": "Type name here"
+  }
+}

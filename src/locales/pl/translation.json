@@ -1,0 +1,11 @@
+{
+  "title": "DO ZROBIENIA",
+  "items": "Przedmiotów",
+  "comments": "Komentarze",
+  "buttons": {
+    "languages": "Języki",
+    "addNew": "Dodaj nowy",
+    "delete": "Kasować",
+    "newItemPlaceholder": "Wpisz nazwę tutaj"
+  }
+}

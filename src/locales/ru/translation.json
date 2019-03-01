@@ -1,0 +1,11 @@
+{
+  "title": "Задачник",
+  "items": "Задачи",
+  "comments": "Комментарии",
+  "buttons": {
+    "languages": "Мови",
+    "addNew": "Добавить новое",
+    "delete": "Удалить",
+    "newItemPlaceholder": "Введите имя здесь"
+  }
+}

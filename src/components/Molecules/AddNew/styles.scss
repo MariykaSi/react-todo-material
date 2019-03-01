@@ -1,0 +1,29 @@
+@import "../../../styles/variables.scss";
+
+.addNew {
+  margin-bottom: 20px;
+  label {
+    transform: translate(14px, 10px) scale(1);
+    font-family: "Roboto Regular";
+  }
+  input {
+    height: 17px;
+    padding: 10px;
+    font-family: "Roboto Regular";
+  }
+  .input-field {
+    width: 68%;
+  }
+  button {
+    height: 37px;
+    width: 30%;
+    float: right;
+    background: $blue;
+    color: $white;
+    text-transform: none;
+    box-shadow: none;
+    span {
+      font-family: "Roboto Medium";
+    }
+  }
+}

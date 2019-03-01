@@ -1,0 +1,51 @@
+@import "../../../styles/variables.scss";
+
+.listItemContainer {
+  .listItem.selected,
+  .listItem.selected:hover,
+  .listItem.selected:focus {
+    background-color: transparent;
+    border-left: 5px solid $strongPink;
+    margin-left: -1px;
+    .contentItem {
+      border-bottom: 1px solid $borderGray;
+    }
+  }
+  .listItem {
+    padding: 10px 15px 0 30px;
+    cursor: pointer;
+    .contentItem {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding-bottom: 10px;
+      .left {
+        width: 70%;
+        .text {
+          float: left;
+          margin-right: 25px;
+          font-family: "Roboto Medium";
+        }
+        .commentsCount {
+          background-color: $blue;
+          padding: 3px 13px;
+          font-size: 13pt;
+          color: $white;
+          border-radius: 15px;
+        }
+      }
+      .right {
+        width: 30%;
+        text-align: right;
+        .button {
+          text-transform: none;
+          width: 100px;
+          border-width: 2px;
+          span {
+            font-family: "Roboto Light";
+          }
+        }
+      }
+    }
+  }
+}

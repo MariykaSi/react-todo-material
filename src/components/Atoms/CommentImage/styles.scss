@@ -1,0 +1,11 @@
+@import "../../../styles/variables.scss";
+
+.сommentImg {
+  margin-right: 14px;
+  span {
+    width: 52px;
+    height: 52px;
+    background: $orange;
+    display: block;
+  }
+}
